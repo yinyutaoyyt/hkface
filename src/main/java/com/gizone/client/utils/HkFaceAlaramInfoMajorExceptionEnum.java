@@ -1,0 +1,103 @@
+package com.gizone.client.utils;
+
+import lombok.Getter;
+
+/**
+ * @author yyt
+ */
+@Getter
+public enum HkFaceAlaramInfoMajorExceptionEnum {
+    /**
+     * 海康人脸设备 报警信息详情 异常次类型
+     */
+    MINOR_NET_BROKEN("MINOR_NET_BROKEN", "27", "网络断开", "02"),
+    MINOR_RS485_DEVICE_ABNORMAL("MINOR_RS485_DEVICE_ABNORMAL", "3a", "RS485连接状态异常", "02"),
+    MINOR_RS485_DEVICE_REVERT("MINOR_RS485_DEVICE_REVERT", "3b", "RS485连接状态异常恢复", "02"),
+    MINOR_DEV_POWER_ON("MINOR_DEV_POWER_ON", "400", "设备上电启动", "02"),
+    MINOR_DEV_POWER_OFF("MINOR_DEV_POWER_OFF", "401", "设备掉电关闭", "02"),
+    MINOR_WATCH_DOG_RESET("MINOR_WATCH_DOG_RESET", "402", "看门狗复位", "02"),
+    MINOR_LOW_BATTERY("MINOR_LOW_BATTERY", "403", "蓄电池电压低", "02"),
+    MINOR_BATTERY_RESUME("MINOR_BATTERY_RESUME", "404", "蓄电池电压恢复正常", "02"),
+    MINOR_AC_OFF("MINOR_AC_OFF", "405", "交流电断电", "02"),
+    MINOR_AC_RESUME("MINOR_AC_RESUME", "406", "交流电恢复", "02"),
+    MINOR_NET_RESUME("MINOR_NET_RESUME", "407", "网络恢复", "02"),
+    MINOR_FLASH_ABNORMAL("MINOR_FLASH_ABNORMAL", "408", "FLASH读写异常", "02"),
+    MINOR_CARD_READER_OFFLINE("MINOR_CARD_READER_OFFLINE", "409", "读卡器掉线", "02"),
+    MINOR_CARD_READER_RESUME("MINOR_CARD_READER_RESUME", "40a", "读卡器掉线恢复", "02"),
+    MINOR_INDICATOR_LIGHT_OFF("MINOR_INDICATOR_LIGHT_OFF", "40b", "指示灯关闭", "02"),
+    MINOR_INDICATOR_LIGHT_RESUME("MINOR_INDICATOR_LIGHT_RESUME", "40c", "指示灯恢复", "02"),
+    MINOR_CHANNEL_CONTROLLER_OFF("MINOR_CHANNEL_CONTROLLER_OFF", "40d", "通道控制器掉线", "02"),
+    MINOR_CHANNEL_CONTROLLER_RESUME("MINOR_CHANNEL_CONTROLLER_RESUME", "40e", "通道控制器恢复", "02"),
+    MINOR_SECURITY_MODULE_OFF("MINOR_SECURITY_MODULE_OFF", "40f", "门控安全模块掉线", "02"),
+    MINOR_SECURITY_MODULE_RESUME("MINOR_SECURITY_MODULE_RESUME", "410", "门控安全模块掉线恢复", "02"),
+    MINOR_LOCAL_CONTROL_NET_BROKEN("MINOR_LOCAL_CONTROL_NET_BROKEN", "413", "就地控制器网络断开", "02"),
+    MINOR_LOCAL_CONTROL_NET_RSUME("MINOR_LOCAL_CONTROL_NET_RSUME", "414", "就地控制器网络恢复", "02"),
+    MINOR_MASTER_RS485_LOOPNODE_BROKEN("MINOR_MASTER_RS485_LOOPNODE_BROKEN", "415", "主控RS485环路节点断开", "02"),
+    MINOR_MASTER_RS485_LOOPNODE_RESUME("MINOR_MASTER_RS485_LOOPNODE_RESUME", "416", "主控RS485环路节点恢复", "02"),
+    MINOR_LOCAL_CONTROL_OFFLINE("MINOR_LOCAL_CONTROL_OFFLINE", "417", "就地控制器掉线", "02"),
+    MINOR_LOCAL_CONTROL_RESUME("MINOR_LOCAL_CONTROL_RESUME", "418", "就地控制器掉线恢复", "02"),
+    MINOR_LOCAL_DOWNSIDE_RS485_LOOPNODE_BROKEN("MINOR_LOCAL_DOWNSIDE_RS485_LOOPNODE_BROKEN", "419", "就地下行RS485环路断开", "02"),
+    MINOR_LOCAL_DOWNSIDE_RS485_LOOPNODE_RESUME("MINOR_LOCAL_DOWNSIDE_RS485_LOOPNODE_RESUME", "41a", "就地下行RS485环路恢复", "02"),
+    MINOR_DISTRACT_CONTROLLER_ONLINE("MINOR_DISTRACT_CONTROLLER_ONLINE", "41b", "分控器在线", "02"),
+    MINOR_DISTRACT_CONTROLLER_OFFLINE("MINOR_DISTRACT_CONTROLLER_OFFLINE", "41c", "分控器离线", "02"),
+    MINOR_ID_CARD_READER_NOT_CONNECT("MINOR_ID_CARD_READER_NOT_CONNECT", "41d", "身份证阅读器未连接（智能专用）", "02"),
+    MINOR_ID_CARD_READER_RESUME("MINOR_ID_CARD_READER_RESUME", "41e", "身份证阅读器连接恢复（智能专用）", "02"),
+    MINOR_FINGER_PRINT_MODULE_NOT_CONNECT("MINOR_FINGER_PRINT_MODULE_NOT_CONNECT", "41f", "指纹模组未连接（智能专用）", "02"),
+    MINOR_FINGER_PRINT_MODULE_RESUME("MINOR_FINGER_PRINT_MODULE_RESUME", "420", "指纹模组连接恢复（智能专用）", "02"),
+    MINOR_CAMERA_NOT_CONNECT("MINOR_CAMERA_NOT_CONNECT", "421", "摄像头未连接", "02"),
+    MINOR_CAMERA_RESUME("MINOR_CAMERA_RESUME", "422", "摄像头连接恢复", "02"),
+    MINOR_COM_NOT_CONNECT("MINOR_COM_NOT_CONNECT", "423", "COM口未连接", "02"),
+    MINOR_COM_RESUME("MINOR_COM_RESUME", "424", "COM口连接恢复", "02"),
+    MINOR_DEVICE_NOT_AUTHORIZE("MINOR_DEVICE_NOT_AUTHORIZE", "425", "设备未授权", "02"),
+    MINOR_PEOPLE_AND_ID_CARD_DEVICE_ONLINE("MINOR_PEOPLE_AND_ID_CARD_DEVICE_ONLINE", "426", "人证设备在线", "02"),
+    MINOR_PEOPLE_AND_ID_CARD_DEVICE_OFFLINE("MINOR_PEOPLE_AND_ID_CARD_DEVICE_OFFLINE", "427", "人证设备离线", "02"),
+    MINOR_LOCAL_LOGIN_LOCK("MINOR_LOCAL_LOGIN_LOCK", "428", "本地登录锁定", "02"),
+    MINOR_LOCAL_LOGIN_UNLOCK("MINOR_LOCAL_LOGIN_UNLOCK", "429", "本地登录解锁", "02"),
+    MINOR_BATTERY_ELECTRIC_LOW("MINOR_BATTERY_ELECTRIC_LOW", "411", "电池电压低（仅人脸设备使用）", "02"),
+    MINOR_BATTERY_ELECTRIC_RESUME("MINOR_BATTERY_ELECTRIC_RESUME", "412", "电池电压恢复正常（仅人脸设备使用）", "02"),
+    MINOR_SUBMARINEBACK_COMM_BREAK("MINOR_SUBMARINEBACK_COMM_BREAK", "42a", "与反潜回服务器通信断开", "02"),
+    MINOR_SUBMARINEBACK_COMM_RESUME("MINOR_SUBMARINEBACK_COMM_RESUME", "42b", "与反潜回服务器通信恢复", "02"),
+    MINOR_MOTOR_SENSOR_EXCEPTION("MINOR_MOTOR_SENSOR_EXCEPTION", "42c", "电机或传感器异常", "02"),
+    MINOR_CAN_BUS_EXCEPTION("MINOR_CAN_BUS_EXCEPTION", "42d", "CAN总线异常", "02"),
+    MINOR_CAN_BUS_RESUME("MINOR_CAN_BUS_RESUME", "42e", "CAN总线恢复", "02"),
+    MINOR_GATE_TEMPERATURE_OVERRUN("MINOR_GATE_TEMPERATURE_OVERRUN", "42f", "闸机腔体温度超限", "02"),
+    MINOR_IR_EMITTER_EXCEPTION("MINOR_IR_EMITTER_EXCEPTION", "430", "红外对射异常", "02"),
+    MINOR_IR_EMITTER_RESUME("MINOR_IR_EMITTER_RESUME", "431", "红外对射恢复", "02"),
+    MINOR_LAMP_BOARD_COMM_EXCEPTION("MINOR_LAMP_BOARD_COMM_EXCEPTION", "432", "灯板通信异常", "02"),
+    MINOR_LAMP_BOARD_COMM_RESUME("MINOR_LAMP_BOARD_COMM_RESUME", "433", "灯板通信恢复", "02"),
+    MINOR_IR_ADAPTOR_COMM_EXCEPTION("MINOR_IR_ADAPTOR_COMM_EXCEPTION", "434", "红外转接板通信异常", "02"),
+    MINOR_IR_ADAPTOR_COMM_RESUME("MINOR_IR_ADAPTOR_COMM_RESUME", "435", "红外转接板通信恢复", "02"),
+    ;
+    /**
+     * 定义
+     */
+    private String definition;
+    /**
+     * 16进制
+     */
+    private String value;
+    /**
+     * 含义
+     */
+    private String meaning;
+    /**
+     * 主类型定义 value
+     */
+    private String mainValue;
+
+    HkFaceAlaramInfoMajorExceptionEnum(String definition, String value, String meaning, String mainValue) {
+        this.definition = definition;
+        this.value = value;
+        this.meaning = meaning;
+        this.mainValue = mainValue;
+    }
+
+    public static String getMeaning(String value) {
+        for (HkFaceAlaramInfoMajorExceptionEnum c : HkFaceAlaramInfoMajorExceptionEnum.values()) {
+            if (c.getValue().equals(value)) {
+                return c.getMeaning();
+            }
+        }
+        return null;
+    }
+}
